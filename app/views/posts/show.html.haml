@@ -43,4 +43,6 @@
   - if @post.description.present?
     .description_wrapper= markdown @post.description
     %hr/
-    .submitbtn= f.submit "Submit", class: "btn btn-default"
+  #comments
+    = render :partial => 'comments/comment', :collection => @comments, :as => :comment
+    = render :partial => 'comments/form', :locals => { :comment => @new_comment }

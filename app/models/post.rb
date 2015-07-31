@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   acts_as_votable
   acts_as_taggable
+  acts_as_commentable
   belongs_to :category
   belongs_to :user
 

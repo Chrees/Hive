@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :comments, :only => [:create, :destroy]
   resources :posts do
     member do
       put "like", to: "posts#upvote"

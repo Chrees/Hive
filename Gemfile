@@ -16,6 +16,7 @@ gem 'devise', '~> 3.5.1'
 gem 'paperclip', '~> 4.3.0'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts-as-taggable-on', '~> 3.5.0'
+gem 'acts_as_commentable_with_threading', '~> 2.0.0'
 gem 'mousetrap-rails'
 gem 'redcarpet', '~> 3.3.2'
 gem 'sdoc', '~> 0.4.0', group: :doc

@@ -51,6 +51,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comments = @post.comment_threads.order('created_at desc')
+    @new_comment = Comment.build_from(@post, current_user.id, "")
   end
 
   private
