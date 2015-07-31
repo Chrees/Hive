@@ -21,6 +21,10 @@
       .image-details
         %span.glyphicon.glyphicon-link
         = link_to "Source", @post.source
+    .image-details.pull-right
+    = link_to like_post_path(@post), method: :put, class: "likes" do
+      = @post.get_upvotes.size
+      %span.glyphicon.glyphicon-heart
   %hr/
   %a.class{:name => "bottom"}
   - if @post.description.present?
