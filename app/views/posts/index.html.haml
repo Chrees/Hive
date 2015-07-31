@@ -11,7 +11,7 @@
 
 %div.categories
   - Category.all.each do |category|
-    = link_to image_tag(category.name), posts_path(category: category.name)
+    = link_to image_tag((category.name).split('/')[0]), posts_path(category: category.name)
 
 %section#tile_wrapper
   %article

@@ -4,6 +4,15 @@
     - if current_user == User.first
       #edit_post= link_to image_tag("Edit"), edit_post_path
       #new_post= link_to image_tag("Add"),  new_post_path
+    .controls-left
+      = link_to image_tag("Nextcat"), @post.nextcat, data: { keybinding: ['q'] }
+      = link_to image_tag("Next"), @post.next, data: { keybinding: ['a','left'] }
+    .controls-right
+      = link_to image_tag("Pre"), @post.previous, data: { keybinding: ['d','right'] }
+      = link_to image_tag("Prevcat"), @post.prevcat, data: { keybinding: ['e'] }
+    .scroll= link_to "", post_path(:anchor => 'bottom'), data: { keybinding: ['s'] }
+    .scroll= link_to "", post_path(:anchor => 'top'), data: { keybinding: ['w'] }
+  
     
 .image-wrapper
   - if @post.image?
@@ -34,3 +43,4 @@
   - if @post.description.present?
     .description_wrapper= markdown @post.description
     %hr/
+    .submitbtn= f.submit "Submit", class: "btn btn-default"
