@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :upvote]
 
   def new
     @post = current_user.posts.build
@@ -38,7 +38,16 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order("created_at DESC")
+    if params[:category].present?
+      @category_id = Category.find_by(name: params[:category]).id
+      @posts = Post.where(category_id: @category_id).order("created_at DESC")
+      @is_categorized = true
+    elsif params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all.order("created_at DESC")
+      @is_categorized = true
+    end
   end
 
   def show
@@ -47,7 +56,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:source, :description, :image, :category_id)
+    params.require(:post).permit(:source, :description, :image, :category_id, :tag_list)
   end
 
   def find_post

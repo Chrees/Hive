@@ -5,5 +5,7 @@ Rails.application.routes.draw do
       put "like", to: "posts#upvote"
     end
   end
+  get 'tags/:tag', to: 'posts#index', as: :tag
+
   root "posts#index"
 end

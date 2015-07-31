@@ -27,6 +27,10 @@
       %span.glyphicon.glyphicon-heart
   %hr/
   %a.class{:name => "bottom"}
+  .post-tags
+    - @post.tag_list.each do |tag|
+      .tags
+        = link_to tag, tag_path(tag)
   - if @post.description.present?
     .description_wrapper= markdown @post.description
     %hr/
