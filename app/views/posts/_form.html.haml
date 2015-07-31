@@ -8,10 +8,10 @@
         - @post.errors.full_messages.each do |msg|
           %li= msg
 
-      .form_group
-        = f.input :source, input_html: { class: 'form-control' }
+  .form_group
+    = f.input :source, input_html: { class: 'form-control' }
 
-      .form_group
-        = f.input :description, input_html: { class: 'form-control' }
+  .form_group
+    = f.input :description, input_html: { class: 'form-control' }
 
-      = f.button :submit, class: "btn btn-primary"
+  = f.button :submit, class: "btn btn-primary"

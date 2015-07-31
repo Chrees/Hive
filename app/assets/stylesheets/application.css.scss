@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require mousetrap
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.loader { 
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 9999;
+  background: url('Preloader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+
+body {
+	background: #E9E9E9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
+hr { 
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.navbar-default{
+  padding: none;
+  background-color: #E9E9E9;
+  border: none;
+  box-shadow: none;
+  position: fixed;
+  top: -90px;
+  transition: top 0.4s ease-in-out;
+  width: 100%;
+}
+
+.nav-up {
+  top: -4px;
+  left: 0px;
+}
+
+.navbar {
+  box-shadow: none;
+}
+
+#notice-wrapper {
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  line-height: 3;
+  z-index: 999;
+  background: rgba( 57, 151, 171 , 1);
+}
+
+.alert {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1.5rem 0 1.4rem 0;
+  margin: 0;
+}
+
+#edit_page {
+	.current_image {
+		img {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+}
+
+#post_show {
+  height: 100%;
+	.panel-heading {
+		padding: 0;
+	}
+
+	.panel-body {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+		padding: 35px;
+    margin-bottom: 150px;
+		h1 {
+			margin: 0 0 10px 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+		.user {
+			padding-top: 8px;
+		}
+	}
+}
+
+.panel-default {
+  margin-top: 120px;
+}
+
+.logo {
+  letter-spacing: 0.1em;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  font-size: 42px;
+  padding-top: 4px;
+  a {
+    color: #19444D;
+    &:hover {
+      color: #505050;
+      text-decoration: none;
+    }
+  }
+}
+
+.margin-top {
+  margin-top: 20px;
+}
