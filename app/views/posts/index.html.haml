@@ -9,6 +9,10 @@
   - else
     #profile= link_to image_tag("Sign_in.svg"), new_user_session_path, data: { no_turbolink: true }
 
+%div.categories
+  - Category.all.each do |category|
+    = link_to image_tag(category.name), posts_path(category: category.name)
+
 %section#tile_wrapper
   %article
     - @posts.each do |post|

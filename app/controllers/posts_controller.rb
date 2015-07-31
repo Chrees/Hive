@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def new
     @post = current_user.posts.build
@@ -46,7 +47,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:source, :description, :image)
+    params.require(:post).permit(:source, :description, :image, :category_id)
   end
 
   def find_post
