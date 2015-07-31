@@ -1,2 +1,20 @@
-- @posts.each do |post|
-  %h2= link_to post.description, post
+%nav.navbar
+  .container.margin-top
+    .logo= link_to "Spagheese", root_path, data: { keybinding: 'x' }
+ 
+%div#accountbox
+  - if user_signed_in?
+    #profile= link_to image_tag("Sign_in.svg"), edit_user_registration_path
+    #profile= link_to image_tag("Sign_out.svg"), destroy_user_session_path, :method => :delete
+  - else
+    #profile= link_to image_tag("Sign_in.svg"), new_user_session_path, data: { no_turbolink: true }
+
+%section#tile_wrapper
+  %article
+    - @posts.each do |post|
+      .tile
+        .hexagon
+          .hexagon-in1
+            .hexagon-in2
+              - if post.image?
+                = link_to (image_tag post.image.url(:thumb)), post, class: "index-img"

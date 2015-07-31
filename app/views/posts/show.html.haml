@@ -1,5 +1,28 @@
-%p= @post.source
-%p= @post.description
+%nav.navbar.navbar-default
+  .container
+    .logo= link_to "HIVE", root_path, data: { keybinding: 'x' }
+    - if current_user == User.first
+      #edit_post= link_to image_tag("Edit"), edit_post_path
+      #new_post= link_to image_tag("Add"),  new_post_path
+    
+.image-wrapper
+  - if @post.image?
+    = image_tag @post.image.url(:medium)
 
-= link_to "New Post", new_post_path	
-= link_to "Back", root_path
+.col-md-6.col-md-offset-3
+  .post-details
+    .image-details
+      = distance_of_time_in_words(Time.now, @post.created_at) 
+      ago to
+    .image-details
+      %span.glyphicon.glyphicon-resize-full
+      = link_to "Full Resolution", @post.image.url
+    - if @post.source?
+      .image-details
+        %span.glyphicon.glyphicon-link
+        = link_to "Source", @post.source
+  %hr/
+  %a.class{:name => "bottom"}
+  - if @post.description.present?
+    .description_wrapper= markdown @post.description
+    %hr/

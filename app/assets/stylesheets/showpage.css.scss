@@ -1,0 +1,162 @@
+/* _________________________________________ CONTROLS _________________________________________ */
+
+#top-anchor {
+  position: absolute;
+  top: 0px;
+}
+
+.controls-left {
+  padding-top: 20px;
+  height: 30px;
+  width: 100px;
+  top: 0px;
+  left: 10px;
+  position: absolute;
+  opacity: 0.2;
+  img {
+    float: left;
+    height: 30px;
+    width: 50px;
+  }
+}
+
+.controls-right {
+  padding-top: 20px;
+  height: 30px;
+  width: 100px;
+  top: 0px;
+  right: 10px;
+  position: absolute;
+  opacity: 0.2;
+  img {
+    float: left;
+    height: 30px;
+    width: 50px;
+  }
+}
+
+#new_post {
+  opacity: 0.2;
+  float: left;
+  margin-top: -4%;
+  margin-left: 30%;
+  img {
+    height: 30px;
+  }
+}
+
+#edit_post {
+  opacity: 0.2;
+  float: right;
+  margin-top: -3.8%;
+  margin-right: 30%;
+  img {
+    height: 26px;
+  }
+}
+
+
+/* _________________________________________ CONTENT _________________________________________ */
+
+.image-wrapper {
+  margin-top: 60px;
+  margin-bottom: 65px;
+  background-color: #E9E9E9;
+  img {
+    box-shadow:  5px 10px 31px -3px rgba(0,0,0,0.33);
+    height: 88vmin;
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+.image-details {
+  border-bottom: 0px #424242 solid;
+  padding: 0 5px 1px 3px;
+  display: inline-block;
+  margin-top: 4px;
+  background: #E9E9E9;
+  margin-right: 3px;
+  font-size: 1.2em;
+  color: #424242;
+  margin-bottom: 5px;
+  a {
+    color: #424242;
+    &:hover {
+      color: #505050;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.textbox {
+  width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 50px 5%;
+}
+
+.tags {
+  box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+  border-bottom: 2px #093D3B solid;
+  border-radius: 2em;
+  padding: 0 10px 1px 10px;
+  display: inline-block;
+  margin-top: 3px;
+  background: #444;
+  margin-right: 3px;
+  font-size: 1.1em;
+  color: #E9E9E9;
+  margin-bottom: 15px;
+  a {
+    text-decoration: none;
+    color: #E9E9E9;
+    &:hover {
+      text-decoration: none;
+      color: #B9B9B9;
+    }
+  }
+}
+
+.glyphicon {
+  font-size: small;
+  top: 2px;
+}
+
+.glyphicon-resize-full {
+  top: 0;
+  margin-rigth: 2px;
+}
+
+.description_wrapper {
+  padding: 0 20px 20px 20px;
+}
+
+.comment_body {
+  padding: 0 10vw 0 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.comment_detail {
+  margin: 0px 3px 5px;
+}
+
+#comments {
+  margin-bottom: 20px;
+}
+
+.submitbtn {
+  margin-bottom: 150px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.form-control {
+  background-color: #fafafa;
+  resize: none;
+}
