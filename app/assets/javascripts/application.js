@@ -103,5 +103,5 @@ $(document).ready(function(){
         $('#notice-wrapper').fadeOut("slow", function(){
             $(this).remove();
         })
-    }, 3141);
+    }, 2015);
 });

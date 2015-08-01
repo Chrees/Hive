@@ -1,7 +1,7 @@
 .comment-form
   = simple_form_for comment, :remote => true do |f|
     - f.error_notification
-    = f.input :body, :input_html => { :rows => "3" }, :label => false, :class => "form-inputs"
+    = f.input :body, :input_html => { :rows => "2" }, :label => false, :class => "form-inputs"
     = f.input :commentable_id, :as => :hidden, :value => comment.commentable_id
     = f.input :commentable_type, :as => :hidden, :value => comment.commentable_type
     = button_tag "", type: 'submit', class: "submitbtn glyphicon glyphicon-ok"
