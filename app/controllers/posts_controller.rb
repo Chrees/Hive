@@ -44,6 +44,8 @@ class PostsController < ApplicationController
       @is_categorized = true
     elsif params[:tag]
       @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(14)
+    elsif params[:search] && params[:search].size != 0
+      @posts = Post.tagged_with(params[:search]).page(params[:page]).per(14)
     else
       @posts = Post.all.order("created_at DESC").page(params[:page]).per(14)
       @is_categorized = true

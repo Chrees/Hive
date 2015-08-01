@@ -13,6 +13,11 @@
   - Category.all.each do |category|
     = link_to image_tag((category.name).split('/')[0]), posts_path(category: category.name)
 
+.search
+  = form_tag posts_path, :method => 'get' do |f|
+    = text_field_tag :search, params[:search], :class => "searchbox"
+    //= submit_tag "Search"
+
 %section#tile_wrapper.infinite-table
   %article
     = render :partial => 'posts', :object => @posts
