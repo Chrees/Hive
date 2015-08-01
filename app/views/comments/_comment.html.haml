@@ -1,7 +1,15 @@
 %div.comment{ :id => "comment-#{comment.id}" }
-  %hr
-  = link_to "×", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "×", :class => 'close'
-  %h4
-    = comment.user.id
-    %small= comment.updated_at
-  %p= comment.body
+  = link_to "x", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "x", :class => 'close'
+  .comments_wrapper.clearfix
+    .pull-left
+      .comment_body= comment.body
+      %p.comment_detail
+        %small
+          %strong
+          - if comment.user.present?
+            #{comment.user.id}
+          - else
+            Unknown
+          = distance_of_time_in_words(Time.now, comment.updated_at) 
+          ago
+  %hr/

@@ -31,9 +31,12 @@
         %span.glyphicon.glyphicon-link
         = link_to "Source", @post.source
     .image-details.pull-right
-    = link_to like_post_path(@post), method: :put, class: "likes" do
-      = @post.get_upvotes.size
-      %span.glyphicon.glyphicon-heart
+      = link_to like_post_path(@post), method: :put, class: "likes" do
+        = @post.get_upvotes.size
+        %span.glyphicon.glyphicon-heart
+    .image-details.pull-right
+      = @post.comment_threads.count
+      %span.glyphicon.glyphicon-comment
   %hr/
   %a.class{:name => "bottom"}
   .post-tags
@@ -42,7 +45,9 @@
         = link_to tag, tag_path(tag)
   - if @post.description.present?
     .description_wrapper= markdown @post.description
+  - if current_user != nil
     %hr/
-  #comments
-    = render :partial => 'comments/comment', :collection => @comments, :as => :comment
-    = render :partial => 'comments/form', :locals => { :comment => @new_comment }
+    #comments
+      = render :partial => 'comments/comment', :collection => @comments, :as => :comment
+      = render :partial => 'comments/form', :locals => { :comment => @new_comment }
+  .margin-bottom

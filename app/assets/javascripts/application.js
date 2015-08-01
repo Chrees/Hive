@@ -16,6 +16,7 @@
 
 //= require mousetrap
 //= require bootstrap-sprockets
+//= require jquery.infinite-pages
 
 // require turbolinks
 //= require_tree .
@@ -104,6 +105,3 @@ $(document).ready(function(){
         })
     }, 3141);
 });
-
-
-

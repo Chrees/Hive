@@ -19,6 +19,8 @@ gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'acts_as_commentable_with_threading', '~> 2.0.0'
 gem 'mousetrap-rails'
 gem 'redcarpet', '~> 3.3.2'
+gem 'kaminari'
+gem 'jquery-infinite-pages'
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug'

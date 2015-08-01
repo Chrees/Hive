@@ -13,12 +13,9 @@
   - Category.all.each do |category|
     = link_to image_tag((category.name).split('/')[0]), posts_path(category: category.name)
 
-%section#tile_wrapper
+%section#tile_wrapper.infinite-table
   %article
-    - @posts.each do |post|
-      .tile
-        .hexagon
-          .hexagon-in1
-            .hexagon-in2
-              - if post.image?
-                = link_to (image_tag post.image.url(:thumb)), post, class: "index-img"
+    = render :partial => 'posts', :object => @posts
+  %p.pagination
+    = link_to_next_page(@posts, '', :remote => true)
+.test-div
