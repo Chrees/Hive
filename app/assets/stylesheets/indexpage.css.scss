@@ -39,11 +39,13 @@
 }
 
 .searchbox {
+  font-family: 'Lato';
+  font-weight: 400;
   border-shadow: none;
   border: none;
   width: 26vw;
   line-height: 40px;
-  font-size: 1.6em;
+  font-size: 2em;
   text-align: center;
   background-color: #E9E9E9;
   &:hover {
@@ -54,7 +56,7 @@
 
 #tile_wrapper {
   border-radius: 10px;
-  box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.2);
   width: 1000px;
   overflow: hidden;
   padding-top: 50px;
@@ -62,9 +64,9 @@
   position: relative;
   margin: 0 auto;
   margin-bottom: 5em;
-  background-image: url("tex.png");
+  /*background-image: url("badtex.jpg");*/
   /*background-size: 50px;*/
-  background-color: rgba( 216, 237, 242  ,0.3);
+  background-color: #f0f9ed;
 }
 
 /* _________________________________________ HEXAGONS _________________________________________ */
@@ -187,5 +189,24 @@
   }
   .tile:nth-child(n+2) {
     margin-top: -56px;
+  }
+}
+
+/* _________________________________________ FOOTER _________________________________________ */
+
+#footer {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 120px;
+  a {
+    margin: 0 10px 0 10px;
+    border-radius: 10px;
+    padding: 1px 10px 3px 10px;
+    color: #888;
+    &:hover {
+      box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+      background-color: white;
+      text-decoration: none;
+    }
   }
 }

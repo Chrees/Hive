@@ -17,6 +17,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Lato:400,300,700|Arimo:400,700|Indie+Flower);
 
 
 .loader { 
@@ -29,12 +30,10 @@
 
 
 body {
+  font-family: 'Lato';
 	background: #E9E9E9;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 100;
-}
 
 hr { 
   border: 0;
@@ -72,7 +71,7 @@ hr {
   width: 100%;
   line-height: 3;
   z-index: 999;
-  background: rgba( 57, 151, 171 , 1);
+  background: rgba( 240, 249, 237 , 1);
 }
 
 .alert {
@@ -123,7 +122,8 @@ hr {
 }
 
 .logo {
-  letter-spacing: 0.1em;
+  font-family: 'Lato';
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   text-align: center;
   font-size: 42px;
@@ -143,9 +143,4 @@ hr {
 
 .margin-bottom {
   margin-bottom: 150px;
-}
-
-.test-div {
-  height: 300px;
-  width: 100%;
 }

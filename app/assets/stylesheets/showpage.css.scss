@@ -79,7 +79,7 @@
   margin-top: 4px;
   background: #E9E9E9;
   margin-right: 3px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #424242;
   margin-bottom: 5px;
   a {
@@ -111,33 +111,63 @@
   font-size: 1.1em;
   color: #E9E9E9;
   margin-bottom: 15px;
+  &:hover {
+    background-color: #F0F9ED;
+  }
   a {
     text-decoration: none;
     color: #E9E9E9;
     &:hover {
       text-decoration: none;
-      color: #B9B9B9;
+      color: black;
     }
   }
 }
 
 .glyphicon {
+  padding: 0 5px 0 5px;
   font-size: small;
   top: 2px;
 }
 
 .glyphicon-resize-full {
   top: 0;
-  margin-rigth: 2px;
+}
+
+.glyphicon-heart {
+  &:hover {
+    color: #c85a64;
+  }
+}
+
+.glyphicon-ok {
+  color: #BFBFBF;
+  &:hover {
+    color: black;
+  }
 }
 
 .description_wrapper {
+  font-size: 1.3em;
   padding: 0 20px 20px 20px;
+  a {
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    padding: 0 5px 2px 5px;
+    &:hover {
+      text-decoration: none;
+      background-color: #F0F9ED;
+      color: black;
+    }
+  }
 }
 
 .comment_body {
-  padding: 0 10vw 0 10px;
-  font-size: 18px;
+  font-family: 'Lato';
+  font-size: 1.5em;
+  display: inline-block;
+  width: 100%;
   margin-bottom: 10px;
   color: #333;
 }
@@ -151,12 +181,27 @@
 }
 
 .submitbtn {
-  margin-bottom: 150px;
-  margin-top: 10px;
-  text-align: right;
+  width: 53px;
+  height: 53px;
+  border: none;
+  font-size: 1.5em;
+  float: right;
+  background-color: #E9E9E9;
 }
 
 .form-control {
-  background-color: #fafafa;
   resize: none;
+}
+
+#comment_body {
+  margin-top: 50px;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 1.5em;
+  border: none;
+  width: 100%;
+  background-color: #E9E9E9;
+  &:hover {
+    background-color: #ECECEC;
+  }
 }

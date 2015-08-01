@@ -1,6 +1,6 @@
 %nav.navbar.navbar-default
   .container
-    .logo= link_to "HIVE", root_path, data: { keybinding: 'x' }
+    .logo= link_to "minum", root_path, data: { keybinding: 'x' }
     - if current_user == User.first
       #edit_post= link_to image_tag("Edit"), edit_post_path
       #new_post= link_to image_tag("Add"),  new_post_path
@@ -47,8 +47,8 @@
         = link_to tag, tag_path(tag)
   - if @post.description.present?
     .description_wrapper= markdown @post.description
-  - if current_user != nil
     %hr/
+  - if current_user != nil
     #comments
       = render :partial => 'comments/comment', :collection => @comments, :as => :comment
       = render :partial => 'comments/form', :locals => { :comment => @new_comment }

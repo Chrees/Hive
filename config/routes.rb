@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end
   end
   get 'tags/:tag', to: 'posts#index', as: :tag
-
+  get 'contact', to: 'posts#contact'
+  get 'about', to: 'posts#about'
   root "posts#index"
 end

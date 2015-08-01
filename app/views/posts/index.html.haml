@@ -1,6 +1,6 @@
 %nav.navbar
   .container.margin-top
-    .logo= link_to "Spagheese", root_path, data: { keybinding: 'x' }
+    .logo= link_to "minuit", root_path, data: { keybinding: 'x' }
  
 %div#accountbox
   - if user_signed_in?
@@ -23,3 +23,8 @@
     = render :partial => 'posts', :object => @posts
   %p.pagination
     = link_to_next_page(@posts, '', :remote => true)
+
+#footer
+  .col-md-6.col-md-offset-3
+    =link_to "about", about_path  
+    =link_to "contact", contact_path

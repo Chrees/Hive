@@ -34,6 +34,7 @@ class PostsController < ApplicationController
 
   def upvote
     @post.upvote_by current_user
+    env["HTTP_REFERER"] += '#bottom'
     redirect_to :back
   end
 
@@ -57,6 +58,13 @@ class PostsController < ApplicationController
       @comments = @post.comment_threads.order('created_at desc')
       @new_comment = Comment.build_from(@post, current_user.id, "")
     end
+  end
+
+  
+  def about
+  end
+
+  def contact
   end
 
   private
