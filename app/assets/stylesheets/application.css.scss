@@ -19,6 +19,23 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Poiret+One|Lato:400,300,700|Arimo:400,700|Indie+Flower);
 
+.daytime1 {
+  background: #E9E9E9;
+}
+
+.nighttime1 {
+  opacity: 0.8;
+  background: #505050;
+}
+
+.daytime2 {
+  background: #e2eff5;
+}
+
+.nighttime2 {
+  background: #2e6d89;
+}
+
 
 .loader { 
   position: fixed;
@@ -31,7 +48,6 @@
 
 body {
   font-family: 'Lato';
-	background: #E9E9E9;
 }
 
 
@@ -129,7 +145,7 @@ hr {
   font-size: 42px;
   padding-top: 4px;
   a {
-    color: #19444D;
+    color: black;
     &:hover {
       color: #505050;
       text-decoration: none;

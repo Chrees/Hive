@@ -105,3 +105,11 @@ $(document).ready(function(){
         })
     }, 2015);
 });
+
+// For changing colors
+$(document).ready(function(){
+    $('#mode').click(function(){
+        $('body, .searchbox, .categories').toggleClass('daytime1').toggleClass('nighttime1');
+        $('#tile_wrapper').toggleClass('daytime2').toggleClass('nighttime2');
+    });
+});

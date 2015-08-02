@@ -1,15 +1,34 @@
 #accountbox {
   padding-top: 35px;
   height: 80px;
-  width: 105px;
+  width: 75px;
   top: 0px;
   right: 0px;
   position: absolute;
 }
 
 #profile {
-  opacity: 0.6;
+  opacity: 0.4;
   float: left;
+  img {
+    margin-right: 10px;
+    width: 30px;
+  }
+}
+
+#colorbox {
+  padding-top: 35px;
+  height: 80px;
+  width: 75px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+#mode {
+  opacity: 0.8;
+  float: right;
+  cursor: pointer;
   img {
     margin-right: 10px;
     width: 30px;
@@ -24,7 +43,6 @@
   padding: 10px 0 10px 0;
   text-align: center;
   margin-bottom: 50px;
-  background: #E9E9E9;
   img {
     display: inline-block;
     width: 70px;
@@ -47,7 +65,6 @@
   line-height: 40px;
   font-size: 2em;
   text-align: center;
-  background-color: #E9E9E9;
   &:hover {
     background-color: #f3f3f3;
   }
@@ -66,7 +83,6 @@
   margin-bottom: 5em;
   /*background-image: url("badtex.jpg");*/
   /*background-size: 50px;*/
-  background-color: #f0f9ed;
 }
 
 /* _________________________________________ HEXAGONS _________________________________________ */
@@ -205,7 +221,7 @@
     color: #888;
     &:hover {
       box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
-      background-color: white;
+      background-color: #E2EFF5;
       text-decoration: none;
     }
   }

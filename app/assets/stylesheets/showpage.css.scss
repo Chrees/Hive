@@ -126,8 +126,8 @@
 
 .glyphicon {
   padding: 0 5px 0 5px;
-  font-size: small;
   top: 2px;
+  font-family: 'Arimo';
 }
 
 .glyphicon-resize-full {
@@ -157,7 +157,7 @@
     padding: 0 5px 2px 5px;
     &:hover {
       text-decoration: none;
-      background-color: #F0F9ED;
+      background-color: #B3D5E5;
       color: black;
     }
   }
@@ -204,4 +204,24 @@
   &:hover {
     background-color: #ECECEC;
   }
+}
+
+#navfield_left {
+  left: 0px;
+  top: 60px;
+  height: 100vh;
+  width: 5vw;
+  z-index: 999;
+  position: fixed;
+  background: transparent;
+}
+
+#navfield_right {
+  right: 0px;
+  top: 60px;
+  height: 100vh;
+  width: 5vw;
+  z-index: 999;
+  position: fixed;
+  background: transparent;
 }

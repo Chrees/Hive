@@ -8,16 +8,19 @@
   - else
     #profile= link_to image_tag("Sign_in.svg"), new_user_session_path, data: { no_turbolink: true }
 
-%div.categories
+%div#colorbox
+  #mode= image_tag("Nightmode.svg")
+
+%div.categories.daytime1
   - Category.all.each do |category|
     = link_to image_tag((category.name).split('/')[0]), posts_path(category: category.name)
 
 .search
   = form_tag posts_path, :method => 'get' do |f|
-    = text_field_tag :search, params[:search], :class => "searchbox"
+    = text_field_tag :search, params[:search], :class => "searchbox daytime1"
     //= submit_tag "Search"
 
-%section#tile_wrapper.infinite-table
+%section#tile_wrapper.infinite-table.daytime2
   %article
     = render :partial => 'posts', :object => @posts
   %p.pagination

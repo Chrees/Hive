@@ -1,5 +1,6 @@
 %div.comment{ :id => "comment-#{comment.id}" }
-  = link_to "x", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "x", :class => 'close'
+  - if current_user == User.first
+    = link_to "x", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "x", :class => 'close'
   .comments_wrapper.clearfix
     .pull-left
       .comment_body= comment.body

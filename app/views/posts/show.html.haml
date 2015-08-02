@@ -1,9 +1,6 @@
 %nav.navbar.navbar-default
   .container
     .logo= link_to "minum", root_path, data: { keybinding: 'x' }
-    - if current_user == User.first
-      #edit_post= link_to image_tag("Edit"), edit_post_path
-      #new_post= link_to image_tag("Add"),  new_post_path
     .controls-left
       = link_to image_tag("Nextcat"), @post.nextcat, data: { keybinding: ['q'] }
       = link_to image_tag("Next"), @post.next, data: { keybinding: ['a','left'] }
@@ -20,6 +17,12 @@
   - else
     = image_tag @post.image.url(:medium), :style => "transform: rotate(-4deg)"
 
+= link_to @post.next do
+  #navfield_left
+
+= link_to @post.previous do
+  #navfield_right
+
 .col-md-6.col-md-offset-3
   .post-details
     .image-details
@@ -32,6 +35,14 @@
       .image-details
         %span.glyphicon.glyphicon-link
         = link_to "Source", @post.source
+    - if current_user == User.first
+      .image-details
+        = link_to edit_post_path do
+          %span.glyphicon.glyphicon-wrench
+        = link_to new_post_path do
+          %span.glyphicon.glyphicon-plus
+        = link_to post_path, method: :delete, data: { confirm: "Are you sure?" } do
+          %span.glyphicon.glyphicon-remove
     .image-details.pull-right
       = link_to like_post_path(@post), method: :put, class: "likes" do
         = @post.get_upvotes.size
