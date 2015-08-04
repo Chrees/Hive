@@ -84,14 +84,6 @@ Rails.application.configure do
       :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    },
-    :styles => {
-      :thumb => "222x256#",
-      :medium => "1600x1600>"
-    },
-    :convert_options => {
-      :thumb => "-gravity center -crop 500x500+0+0 -quality 80",
-      :medium => '-quality 80' 
     }
   }
 end
