@@ -28,7 +28,7 @@ gem 'redcarpet', '~> 3.3.2'
 gem 'kaminari'
 gem 'jquery-infinite-pages'
 gem 'inline_svg'
-gem 'aws-sdk', '~> 2.1.8'
+gem 'aws-sdk', '< 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug'
