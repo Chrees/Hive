@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
         format.js {render inline: "location.reload();" }
       end
     else
-      render :js => "alert('error saving comment');"
+      render :js => "alert('I cannot save your comment like that, sorry');"
     end
   end
 
@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
     if @comment.destroy
       render :json => @comment, :status => :ok
     else
-      render :js => "alert('error deleting comment');"
+      render :js => "alert('I failed to delete this comment :(');"
     end
   end
 end

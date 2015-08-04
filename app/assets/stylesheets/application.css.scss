@@ -19,24 +19,6 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Poiret+One|Lato:400,300,700|Arimo:400,700|Indie+Flower);
 
-.daytime1 {
-  background: #E9E9E9;
-}
-
-.nighttime1 {
-  opacity: 0.8;
-  background: #505050;
-}
-
-.daytime2 {
-  background: #e2eff5;
-}
-
-.nighttime2 {
-  background: #2e6d89;
-}
-
-
 .loader { 
   position: fixed;
   left: 0; top: 0;
@@ -45,6 +27,9 @@
   background: url('Preloader.gif') 50% 50% no-repeat rgb(249,249,249);
 }
 
+#Layer_1 {
+  width: 70px;
+}
 
 body {
   font-family: 'Lato';
@@ -62,7 +47,6 @@ hr {
 
 .navbar-default{
   padding: none;
-  background-color: #E9E9E9;
   border: none;
   box-shadow: none;
   position: fixed;
@@ -87,7 +71,7 @@ hr {
   width: 100%;
   line-height: 3;
   z-index: 999;
-  background: rgba( 240, 249, 237 , 1);
+  background: rgba( 226, 239, 245 , 1);
 }
 
 .alert {
@@ -140,16 +124,12 @@ hr {
 .logo {
   font-family: 'Lato';
   font-weight: 400;
+  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
   text-align: center;
-  font-size: 42px;
-  padding-top: 4px;
-  a {
-    color: black;
-    &:hover {
-      color: #505050;
-      text-decoration: none;
-    }
+  font-size: 45px;
+  &:hover a {
+    text-decoration: none;
   }
 }
 

@@ -1,5 +1,9 @@
 /* _________________________________________ CONTROLS _________________________________________ */
 
+#showpage-logo {
+  opacity: 0.6;
+}
+
 #top-anchor {
   position: absolute;
   top: 0px;
@@ -7,13 +11,12 @@
 
 .controls-left {
   padding-top: 20px;
-  height: 30px;
-  width: 100px;
+  height: 60px;
+  width: 25vw;
   top: 0px;
   left: 10px;
   position: absolute;
-  opacity: 0.2;
-  img {
+  svg {
     float: left;
     height: 30px;
     width: 50px;
@@ -27,9 +30,8 @@
   top: 0px;
   right: 10px;
   position: absolute;
-  opacity: 0.2;
-  img {
-    float: left;
+  svg {
+    float: right;
     height: 30px;
     width: 50px;
   }
@@ -61,7 +63,6 @@
 .image-wrapper {
   margin-top: 60px;
   margin-bottom: 65px;
-  background-color: #E9E9E9;
   img {
     box-shadow:  5px 10px 31px -3px rgba(0,0,0,0.33);
     height: 88vmin;
@@ -77,7 +78,6 @@
   padding: 0 5px 1px 3px;
   display: inline-block;
   margin-top: 4px;
-  background: #E9E9E9;
   margin-right: 3px;
   font-size: 1.1em;
   color: #424242;
@@ -101,27 +101,14 @@
 
 .tags {
   box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
-  border-bottom: 2px #093D3B solid;
+  border-bottom: 1px black solid;
   border-radius: 2em;
   padding: 0 10px 1px 10px;
   display: inline-block;
   margin-top: 3px;
-  background: #444;
   margin-right: 3px;
   font-size: 1.1em;
-  color: #E9E9E9;
   margin-bottom: 15px;
-  &:hover {
-    background-color: #F0F9ED;
-    a {
-      color: black;
-      text-decoration: none;
-    }
-  }
-  a {
-    text-decoration: none;
-    color: #E9E9E9;
-  }
 }
 
 .glyphicon {
@@ -143,37 +130,26 @@
 .glyphicon-ok {
   color: #BFBFBF;
   &:hover {
-    color: black;
+    color: #61B500;
   }
 }
 
 .description_wrapper {
   font-size: 1.3em;
   padding: 0 20px 20px 20px;
-  a {
-    border-radius: 6px;
-    background-color: white;
-    color: black;
-    padding: 0 5px 2px 5px;
-    &:hover {
-      text-decoration: none;
-      background-color: #B3D5E5;
-      color: black;
-    }
-  }
 }
 
 .comment_body {
+  padding-left: 10px;
+  margin: 10px 0 15px 0;
   font-family: 'Lato';
   font-size: 1.5em;
   display: inline-block;
   width: 100%;
-  margin-bottom: 10px;
-  color: #333;
 }
 
 .comment_detail {
-  margin: 0px 3px 5px;
+  margin-right: 10px;
 }
 
 #comments {
@@ -186,7 +162,7 @@
   border: none;
   font-size: 1.5em;
   float: right;
-  background-color: #E9E9E9;
+  background-color: transparent;
 }
 
 .form-control {
@@ -194,16 +170,12 @@
 }
 
 #comment_body {
-  margin-top: 50px;
+  margin-top: 20px;
   font-family: 'Lato';
   font-weight: 400;
   font-size: 1.2em;
   border: none;
   width: 100%;
-  background-color: #E9E9E9;
-  &:hover {
-    background-color: #ECECEC;
-  }
 }
 
 #navfield_left {

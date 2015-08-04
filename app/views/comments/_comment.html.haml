@@ -1,16 +1,16 @@
 %div.comment{ :id => "comment-#{comment.id}" }
-  - if current_user == User.first
-    = link_to "x", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "x", :class => 'close'
   .comments_wrapper.clearfix
     .pull-left
       .comment_body= comment.body
-      %p.comment_detail
-        %small
-          %strong
-          - if comment.user.present?
-            #{comment.user.id}
-          - else
-            Unknown
-          = distance_of_time_in_words(Time.now, comment.updated_at) 
-          ago
+    %p.comment_detail.pull-right
+      %small
+        %strong
+        - if comment.user != nil
+          #{comment.user.name}
+        - else
+          Unknown
+        = distance_of_time_in_words(Time.now, comment.updated_at) 
+        ago
+        - if current_user == User.first ##|| current_user == comment.user               ## Decomment if you want to let users delete their comments
+          = link_to "X", comment_path(comment), :method => :delete, :remote => true, :confirm => "Are you sure you want to remove this comment?", :disable_with => "x"
   %hr/

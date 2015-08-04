@@ -106,10 +106,22 @@ $(document).ready(function(){
     }, 2015);
 });
 
+
+
 // For changing colors
 $(document).ready(function(){
     $('#mode').click(function(){
-        $('body, .searchbox, .categories').toggleClass('daytime1').toggleClass('nighttime1');
-        $('#tile_wrapper').toggleClass('daytime2').toggleClass('nighttime2');
+        $('body').toggleClass('daytime nighttime');
+        if (nighttime == "true") {
+            sessionStorage.setItem('nighttime', "false");
+        } else {
+            sessionStorage.setItem('nighttime', "true");
+        }
     });
+
+    var nighttime = sessionStorage.getItem('nighttime');
+    if (nighttime  == "true") {
+        $('body').toggleClass('daytime nighttime');
+    }
 });
+

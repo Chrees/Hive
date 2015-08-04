@@ -1,26 +1,30 @@
-%nav.navbar
-  .container.margin-top
-    .logo= link_to "minuit", root_path, data: { keybinding: 'x' }
- 
 %div#accountbox
   - if user_signed_in?
-    #profile= link_to image_tag("Sign_in.svg"), edit_user_registration_path
+    /*#profile= link_to image_tag("Sign_in.svg"), edit_user_registration_path*/
+    = link_to edit_user_registration_path do
+      #profile= inline_svg("Profile")
   - else
-    #profile= link_to image_tag("Sign_in.svg"), new_user_session_path, data: { no_turbolink: true }
+    = link_to new_user_session_path do
+      #profile= inline_svg("Profile")
 
 %div#colorbox
-  #mode= image_tag("Nightmode.svg")
+  #mode= inline_svg("Nightmode")
 
-%div.categories.daytime1
-  - Category.all.each do |category|
-    = link_to image_tag((category.name).split('/')[0]), posts_path(category: category.name)
+%section#index_wrapper
+  #index_logo.margin-top
+    .logo= link_to "secona", root_path, data: { keybinding: 'x' }
+   
 
-.search
-  = form_tag posts_path, :method => 'get' do |f|
-    = text_field_tag :search, params[:search], :class => "searchbox daytime1"
-    //= submit_tag "Search"
+  %div.categories
+    - Category.all.each do |category|
+      = link_to inline_svg((category.name).split('/')[0]), posts_path(category: category.name)
 
-%section#tile_wrapper.infinite-table.daytime2
+  .search
+    = form_tag posts_path, :method => 'get' do |f|
+      = text_field_tag :search, params[:search], :class => "searchbox"
+      //= submit_tag "Search"
+
+%section#tile_wrapper.infinite-table
   %article
     = render :partial => 'posts', :object => @posts
   %p.pagination
@@ -29,4 +33,5 @@
 #footer
   .col-md-6.col-md-offset-3
     =link_to "about", about_path  
+    =link_to "shortcuts", shortcuts_path
     =link_to "contact", contact_path

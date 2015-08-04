@@ -1,0 +1,294 @@
+
+.daytime {
+  background: #E9E9E9;
+  .navbar-default{
+    background-color: #E9E9E9;
+  }
+  .logo a {
+    color: #222;
+    &:hover {
+      color: #000;
+    }
+  }
+  #index_wrapper {
+    background: #E9E9E9;
+  }
+  #mode path, #profile path, #profile circle {
+    fill: #BBB;
+    &:hover {
+      fill: #555;
+    }
+  }
+  .categories {
+    background: #E9E9E9;
+  }
+  .searchbox {
+    box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.02);
+    background: #E7E7E7;
+    color: #222;
+    &:hover {
+      background: #FEFEFE;
+    }
+    &:focus {
+      background: #FEFEFE;
+    }
+  }
+  .categories #Layer_1 {
+    path, circle {
+      fill: #222;
+    }
+    &:hover {
+      path, circle {
+        fill: #000;
+      }
+    }
+  }
+  #tile_wrapper {
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.2);
+    background: #E2EFF5;
+  }
+  #footer a {
+    color: #286278;
+    &:hover {
+      color: #4E8FA8;
+      text-decoration: none;
+    }
+  }
+
+  /* --------SHOWPAGE --------- */
+
+  .image-details {
+    color: #444;
+    a {
+      color: #444;
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+  .tags {
+    background: #95B7D8;
+    &:hover {
+      background-color: #79B5D1;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+    a {
+    text-decoration: none;
+    color: #222;
+    }
+  }
+  .description_wrapper {
+    blockquote {
+      border-left: 5px solid #82E051;
+    }
+    pre {
+      color: #7DE900;
+      background-color: #4F514D;
+    }
+    a {
+      background-color: #C9E9B0;
+      color: #444;   
+      &:hover {
+        text-decoration: none;
+        background-color: #82E051;
+        color: black;
+      }
+    }
+  }
+  #comment_body {
+    background-color: #E9E9E9;
+    &:hover {
+      background-color: #ECECEC;
+    }
+  }
+}
+
+
+
+/* ============================================ NIGHTTIME ================================================= */
+
+
+
+.nighttime {
+  background: #2A2927;
+  .navbar-default{
+    background-color: #2A2927;
+  }
+  .logo a {
+    color: #CFCFCF;
+    &:hover {
+      color: #EFEFEF;
+    }
+  }
+  #index_wrapper {
+    background: #191816;
+  }
+  #mode path, #profile path, #profile circle {
+    fill: #CFCFCF;
+    &:hover {
+      fill: #EFEFEF;
+    }
+  }
+  #profile path, #profile circle {
+    fill: #2C6D86;
+    &:hover {
+      fill: #4E8FA8;
+    }
+  }
+  .categories {
+    background: #191816;
+  }
+  .searchbox {
+    box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.2);
+    background: #191816;
+    color: #CFCFCF;
+    &:hover {
+      background: #444;
+    }
+    -webkit-transition: background 500ms ease;
+    -moz-transition: background 500ms ease;
+    -ms-transition: background 500ms ease;
+    -o-transition: background 500ms ease;
+    transition: background 500ms ease;
+    &:focus {
+      background: #444;
+    }
+  }
+  .categories #Layer_1 {
+    path, circle {
+      fill: #CFCFCF;
+    }
+    &:hover {
+      path, circle {
+        fill: #EFEFEF;
+      }
+    }
+  }
+  #tile_wrapper {
+    box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.4);
+    background: #286278;
+    .tile {
+      opacity: 0.9;
+    }
+  }
+  #footer a {
+    color: #286278;
+    &:hover {
+      color: #4E8FA8;
+      text-decoration: none;
+    }
+  }
+
+  /* --------SHOWPAGE --------- */
+  .controls-left svg, .controls-right svg {
+    &:hover * {
+        fill: #EFEFEF;
+    }
+    * {
+      fill: #CFCFCF;
+    }
+  }
+
+  .image-details {
+    color: #ccc;
+    a {
+      color: #ccc;
+      &:hover {
+        color: #2e6d89;
+        text-decoration: none;
+      }
+    }
+  }
+  .tags {
+    background: #444;
+    &:hover {
+      background-color: #aaa;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+    a {
+    text-decoration: none;
+    color: #aaa;
+    }
+  }
+  .description_wrapper {
+    color: #CCC;
+    blockquote {
+      border-left: 5px solid #5BC222;
+    }
+    pre {
+      color: #7DE900;
+      background-color: #4F514D;
+    }
+    a {
+      color: #7DE900;   
+      &:hover {
+        text-decoration: none;
+        text-shadow: 0px 0px 11px rgba(250, 250, 250, 1);
+        -webkit-transition: text-shadow 300ms ease;
+        -moz-transition: text-shadow 300ms ease;
+        -ms-transition: text-shadow 300ms ease;
+        -o-transition: text-shadow 300ms ease;
+        transition: text-shadow 300ms ease;
+      }
+    }
+  }
+  .comments_wrapper {
+    &:hover {
+      .comment_detail {
+        color: #7FA553;
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+      }
+    }
+    .comment_detail {
+      a {
+        color: #2A2927;
+        text-decoration: none;
+        text-shadow: none;
+        opacity: none;
+      }
+      color: #2A2927;
+      -webkit-transition: all 300ms ease;
+      -moz-transition: all 300ms ease;
+      -ms-transition: all 300ms ease;
+      -o-transition: all 300ms ease;
+      transition: all 300ms ease;
+    }
+    .comment_body {
+      color: #CCC;
+    }
+  }
+  #comment_body {
+    color: #222;
+    background-color: #2A2927;
+    &:hover, &:focus {
+      background-color: #AAA;
+      box-shadow: none;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;  
+    }
+  }
+  .font-about {
+    color: #CFCFCF;
+  }
+  #homebutton * {
+    color: #CFCFCF;
+    &:hover {
+      color: #7DE900;
+    }
+  }
+}

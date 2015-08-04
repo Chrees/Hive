@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
-  before_action :authenticate_user!, except: [:index, :show, :upvote, :about, :contact]
+  before_action :authenticate_user!, except: [:index, :show, :upvote]
 
   def new
     @post = current_user.posts.build
@@ -60,8 +60,10 @@ class PostsController < ApplicationController
     end
   end
 
-  
   def about
+  end
+
+  def shortcuts
   end
 
   def contact
@@ -70,7 +72,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:source, :description, :image, :category_id, :tag_list)
+    params.require(:post).permit(:source, :description, :image, :category_id, :tag_list, :css)
   end
 
   def find_post

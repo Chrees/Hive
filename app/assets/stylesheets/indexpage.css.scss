@@ -1,67 +1,87 @@
+#index_logo {
+  margin-top: 0px;
+  font-size: 60px;
+}
+
+#index_wrapper {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  max-width: 1000px;
+  position: relative;
+  padding-bottom: 45px;
+  padding: 30px 0 40px 0;
+  margin: -5px auto -40px auto;
+}
+
 #accountbox {
-  padding-top: 35px;
+  z-index: 999;
+  padding-top: 25px;
   height: 80px;
-  width: 75px;
+  width: 65px;
   top: 0px;
   right: 0px;
   position: absolute;
 }
 
 #profile {
-  opacity: 0.4;
+  width: 40px;
   float: left;
-  img {
-    margin-right: 10px;
+  svg {
     width: 30px;
   }
 }
 
 #colorbox {
-  padding-top: 35px;
+  z-index: 999;
+  padding-top: 25px;
   height: 80px;
-  width: 75px;
+  width: 60px;
   top: 0px;
   left: 0px;
   position: absolute;
 }
 
 #mode {
-  opacity: 0.8;
   float: right;
-  cursor: pointer;
-  img {
-    margin-right: 10px;
+  svg {
     width: 30px;
   }
 }
 
 .categories {
-  border-radius: 5px;
-  width: 36vw;
-  margin-left: 32vw;
+  width: 60%;
+  margin-left: 20%;
   /*box-shadow: 0px 40px 10px -48px rgba(0,0,0,0.3);*/
   padding: 10px 0 10px 0;
   text-align: center;
-  margin-bottom: 50px;
-  img {
+  margin-bottom: 5px;
+  svg {
     display: inline-block;
-    width: 70px;
     margin-right: 10px;
+    margin-top: 5px;
+  }
+  a {                                  // Don't take this away! Needed so it doesn't show pixelbug
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 .search {
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: -45px;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .searchbox {
+  opacity: 0.8;
   font-family: 'Lato';
   font-weight: 400;
+  letter-spacing: 2px;
   border-shadow: none;
+  border-radius: 10px;
   border: none;
-  width: 26vw;
+  width: 25vw;
   line-height: 40px;
   font-size: 2em;
   text-align: center;
@@ -72,15 +92,15 @@
 
 
 #tile_wrapper {
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   width: 1000px;
   overflow: hidden;
   padding-top: 50px;
   padding-bottom: 70px;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 5em;
+  margin-bottom: 20px;
   /*background-image: url("badtex.jpg");*/
   /*background-size: 50px;*/
 }
@@ -211,18 +231,12 @@
 /* _________________________________________ FOOTER _________________________________________ */
 
 #footer {
+  height: 45px;
   text-align: center;
   letter-spacing: 1px;
-  margin-bottom: 120px;
   a {
     margin: 0 10px 0 10px;
     border-radius: 10px;
     padding: 1px 10px 3px 10px;
-    color: #888;
-    &:hover {
-      box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
-      background-color: #E2EFF5;
-      text-decoration: none;
-    }
   }
 }

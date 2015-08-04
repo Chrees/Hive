@@ -1,11 +1,11 @@
 !!! 5
 %html
 %head
-  %title minum
+  %title novoli
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
-%body.daytime1
+%body.daytime
   - if notice || alert
     #notice-wrapper
       - flash.each do |name, msg|

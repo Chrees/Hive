@@ -1,36 +1,39 @@
 %nav.navbar.navbar-default
+  .col-md-2
+  .col-md-2
+  .col-md-4
+  .col-md-2
+  .col-md-2
+
   .container
-    .logo= link_to "minum", root_path, data: { keybinding: 'x' }
+    .logo#showpage-logo= link_to "novoli", root_path, data: { keybinding: 'x' }
     .controls-left
-      = link_to image_tag("Nextcat"), @post.nextcat, data: { keybinding: ['q'] }
-      = link_to image_tag("Next"), @post.next, data: { keybinding: ['a','left'] }
+      #mode= inline_svg("Nightmode")
+      = link_to inline_svg("Nextcat"), @post.nextcat, data: { keybinding: ['q'] }
     .controls-right
-      = link_to image_tag("Pre"), @post.previous, data: { keybinding: ['d','right'] }
-      = link_to image_tag("Prevcat"), @post.prevcat, data: { keybinding: ['e'] }
+      = link_to inline_svg("Prevcat"), @post.prevcat, data: { keybinding: ['e'] }
     .scroll= link_to "", post_path(:anchor => 'bottom'), data: { keybinding: ['s'] }
     .scroll= link_to "", post_path(:anchor => 'top'), data: { keybinding: ['w'] }
   
     
 .image-wrapper
-  - if @post.image? and @post.id != 10
-    = image_tag @post.image.url(:medium)
-  - else
-    = image_tag @post.image.url(:medium), :style => "transform: rotate(-4deg)"
+  = image_tag @post.image.url(:medium), :style =>  @post.css
 
-= link_to @post.next do
+= link_to @post.next, data: { keybinding: ['a','left'] } do
   #navfield_left
 
-= link_to @post.previous do
+= link_to @post.previous, data: { keybinding: ['d','right'] } do
   #navfield_right
 
 .col-md-6.col-md-offset-3
   .post-details
     .image-details
-      = distance_of_time_in_words(Time.now, @post.created_at) 
-      ago to
+      = distance_of_time_in_words(Time.now, @post.created_at)
+      ago
     .image-details
-      %span.glyphicon.glyphicon-resize-full
-      = link_to "Full Resolution", @post.image.url
+      = link_to @post.image.url do
+        %span.glyphicon.glyphicon-resize-full
+        Full Resolution
     - if @post.source?
       .image-details
         %span.glyphicon.glyphicon-link
@@ -59,8 +62,7 @@
   - if @post.description.present?
     .description_wrapper= markdown @post.description
     %hr/
-  - if current_user != nil
-    #comments
-      = render :partial => 'comments/comment', :collection => @comments, :as => :comment
-      = render :partial => 'comments/form', :locals => { :comment => @new_comment }
+  #comments
+    = render :partial => 'comments/comment', :collection => @comments, :as => :comment
+    = render :partial => 'comments/form', :locals => { :comment => @new_comment }
   .margin-bottom
