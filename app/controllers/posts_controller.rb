@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote]
-  before_action :authenticate_user!, except: [:index, :show, :upvote]
+  before_action :authenticate_user!, except: [:index, :show, :upvote, :contact, :shortcuts, :about]
 
   def new
     @post = current_user.posts.build

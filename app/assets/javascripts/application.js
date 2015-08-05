@@ -118,7 +118,6 @@ $(document).ready(function(){
             sessionStorage.setItem('nighttime', "true");
         }
     });
-
     var nighttime = sessionStorage.getItem('nighttime');
     if (nighttime  == "true") {
         $('body').toggleClass('daytime nighttime');

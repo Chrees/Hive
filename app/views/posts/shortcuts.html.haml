@@ -1,29 +1,25 @@
 %nav.navbar
-  .container.margin-top
+  .container
     .logo= link_to "novoli", root_path, data: { keybinding: 'x' }
+
+.container
+  #shortcuts= image_tag("Shortcuts.png")
 
 .col-md-6.col-md-offset-3.font-about
   %br
+  %p Some additional Advise:
   %br
-  %h2 Friendly advise: USE THE SHORTCUTS!
-  %p You may or may not have noticed, that this site only works well when using shortcuts.
-  %p You can use:
-  %ul
-    %li A to get to the next post
-    %li D to get to the previous post
-    %li Q to get to the next post in the same category
-    %li E to get to the previous post in the same category
-    %li S to get to the bottom section
-    %li W to get back up to the image
-    %li C to hide/show the navbar
-    %li X to get back to the index page
-  %p I mean, you can use your mouse too if that's your thing, but thats not what I made this page for.
-  %p For the best Experience view it in Fullscreen (just press F11 for that if you are on Windows)
-  %p I also recommend using Firefox or Chrome for using it, it doesn't really work on Internet Explorer. 
+  %p USE THOSE SHORTCUTS!
+  %br
+  %p For the best Experience go in to Fullscreen Mode (just press F11 for that in most cases)
+  %p I also recommend using Firefox or Chrome.
   %p I have no experience with Safari or other browsers, so if it doesn't look right. Sorry ¯\_(ツ)_/¯
+  %p
+  %p Oh and the red boxes may be invisible on the actual site, but you can still click them.
   %br
   %br
   %br
   #homebutton
     = link_to root_path do
       %span.glyphicon.glyphicon-home
+  %br

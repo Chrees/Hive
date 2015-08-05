@@ -17,7 +17,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Poiret+One|Lato:400,300,700|Arimo:400,700|Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Lato:400,300,700,400italic);
 
 .loader { 
   position: fixed;
@@ -53,6 +53,7 @@ hr {
   top: -90px;
   transition: top 0.4s ease-in-out;
   width: 100%;
+  z-index: 999;
 }
 
 .nav-up {
@@ -117,6 +118,12 @@ hr {
 	}
 }
 
+#new_post {
+  float: none;
+  opacity: 1;
+  margin: 0 0;
+}
+
 .panel-default {
   margin-top: 120px;
 }
@@ -139,4 +146,11 @@ hr {
 
 .margin-bottom {
   margin-bottom: 150px;
+}
+
+#shortcuts {
+  text-align: center;
+  img {
+    width: 90%;
+  }
 }

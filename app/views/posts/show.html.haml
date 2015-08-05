@@ -11,8 +11,8 @@
       #mode= inline_svg("Nightmode")
       = link_to inline_svg("Nextcat"), @post.nextcat, data: { keybinding: ['q'] }
     .controls-right
+      #keys= link_to inline_svg("Keys"), shortcuts_path
       = link_to inline_svg("Prevcat"), @post.prevcat, data: { keybinding: ['e'] }
-    .scroll= link_to "", post_path(:anchor => 'bottom'), data: { keybinding: ['s'] }
     .scroll= link_to "", post_path(:anchor => 'top'), data: { keybinding: ['w'] }
   
     
@@ -25,6 +25,9 @@
 = link_to @post.previous, data: { keybinding: ['d','right'] } do
   #navfield_right
 
+= link_to @post.image.url, data: { keybinding: ['f'] } do
+  #navfield_center
+
 .col-md-6.col-md-offset-3
   .post-details
     .image-details
@@ -36,8 +39,9 @@
         Full Resolution
     - if @post.source?
       .image-details
-        %span.glyphicon.glyphicon-link
-        = link_to "Source", @post.source
+        = link_to @post.source do
+          %span.glyphicon.glyphicon-link
+          Source
     - if current_user == User.first
       .image-details
         = link_to edit_post_path do
@@ -51,8 +55,9 @@
         = @post.get_upvotes.size
         %span.glyphicon.glyphicon-heart
     .image-details.pull-right
-      = @post.comment_threads.count
-      %span.glyphicon.glyphicon-comment
+      = link_to post_path(:anchor => 'bottom'), data: { keybinding: ['s'] } do
+        = @post.comment_threads.count
+        %span.glyphicon.glyphicon-comment
   %hr/
   %a.class{:name => "bottom"}
   .post-tags

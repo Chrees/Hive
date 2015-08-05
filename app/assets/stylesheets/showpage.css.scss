@@ -25,8 +25,8 @@
 
 .controls-right {
   padding-top: 20px;
-  height: 30px;
-  width: 100px;
+  height: 60px;
+  width: 25vw;
   top: 0px;
   right: 10px;
   position: absolute;
@@ -37,26 +37,12 @@
   }
 }
 
-#new_post {
-  opacity: 0.2;
+#keys {
   float: left;
-  margin-top: -4%;
-  margin-left: 30%;
-  img {
-    height: 30px;
+  svg {
+    width: 50px;
   }
 }
-
-#edit_post {
-  opacity: 0.2;
-  float: right;
-  margin-top: -3.8%;
-  margin-right: 30%;
-  img {
-    height: 26px;
-  }
-}
-
 
 /* _________________________________________ CONTENT _________________________________________ */
 
@@ -83,9 +69,7 @@
   color: #424242;
   margin-bottom: 5px;
   a {
-    color: #424242;
     &:hover {
-      color: #505050;
       text-decoration: none;
     }
   }
@@ -100,7 +84,7 @@
 }
 
 .tags {
-  box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 2px -2px rgba(0,0,0,0.75);
   border-bottom: 1px black solid;
   border-radius: 2em;
   padding: 0 10px 1px 10px;
@@ -119,19 +103,6 @@
 
 .glyphicon-resize-full {
   top: 0;
-}
-
-.glyphicon-heart {
-  &:hover {
-    color: #c85a64;
-  }
-}
-
-.glyphicon-ok {
-  color: #BFBFBF;
-  &:hover {
-    color: #61B500;
-  }
 }
 
 .description_wrapper {
@@ -185,7 +156,6 @@
   width: 5vw;
   z-index: 999;
   position: fixed;
-  background: transparent;
 }
 
 #navfield_right {
@@ -195,5 +165,14 @@
   width: 5vw;
   z-index: 999;
   position: fixed;
-  background: transparent;
+}
+
+#navfield_center {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  height: 50vmin;
+  width: 20vw;
+  margin: -30vh 0 0 -10vw;
 }

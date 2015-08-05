@@ -94,6 +94,7 @@
 #tile_wrapper {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-height: 60vh;
   width: 1000px;
   overflow: hidden;
   padding-top: 50px;
@@ -101,7 +102,6 @@
   position: relative;
   margin: 0 auto;
   margin-bottom: 20px;
-  /*background-image: url("badtex.jpg");*/
   /*background-size: 50px;*/
 }
 
