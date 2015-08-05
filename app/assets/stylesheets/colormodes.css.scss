@@ -73,7 +73,7 @@
         text-shadow: none;
       }
       .glyphicon-comment {
-        color: #30BC29;
+        color: #2983BC;
       }
       .likes .glyphicon {
         text-shadow: none;
@@ -85,39 +85,35 @@
     }
   }
   .tags {
-    background: #B7E9B4;
+    background: #444;
     border: none;
     &:hover {
-      background-color: #9AE896;
+      background-color: #222;
       a {
-        color: black;
+        color: #83BFE1;
         text-decoration: none;
       }
     }
     a {
     text-decoration: none;
-    color: #000;
+    color: #CCC;
     }
   }
   .description_wrapper {
     blockquote {
-      border-left: 5px solid #30BC29;
+      border-left: 5px solid #2D91D1;
     }
     pre {
-      color: #9AE896;
-      background-color: #333;
+      color: #2D91D1;
+      background-color: #4F514D;
       box-shadow: 2px 5px 7px 0px rgba(0,0,0,0.2);
     }
     a {
-      color: #30BC29;   
+      color: #2983BC;   
       &:hover {
+        text-shadow: 0px 0px 5px rgba(234, 244, 250, 1);
         text-decoration: none;
-        color: #30BC29;
-        -webkit-transition: text-shadow 300ms ease;
-        -moz-transition: text-shadow 300ms ease;
-        -ms-transition: text-shadow 300ms ease;
-        -o-transition: text-shadow 300ms ease;
-        transition: text-shadow 300ms ease;
+        color: #2D91D1;
       }
     }
   }
@@ -172,7 +168,7 @@
   .glyphicon-ok {
     color: #AAA;
     &:hover {
-      color: #30BC29;
+      color: #2D91D1;
     }
   }
   #homebutton * {
@@ -210,9 +206,9 @@
     }
   }
   #profile path, #profile circle {
-    fill: #2C6D86;
+    fill: #CFCFCF;
     &:hover {
-      fill: #4E8FA8;
+      fill: #EFEFEF;
     }
   }
   .categories {
@@ -246,7 +242,7 @@
   }
   #tile_wrapper {
     box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.4);
-    background: #243C50;
+    background: #324C59;
     .tile {
       opacity: 0.9;
     }
