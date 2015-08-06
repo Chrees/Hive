@@ -77,7 +77,7 @@
       }
       .likes .glyphicon {
         text-shadow: none;
-        color: #EB0D32;
+        color: #D12828;
       }
     }
     a {
@@ -116,6 +116,19 @@
         color: #2D91D1;
       }
     }
+  }
+  table {
+    color:#333;
+    background:#E9E9E9; 
+  }
+  table th {
+    background: #E9E9E9;
+  }
+  table tr {
+      border-bottom: 2px solid #E9E9E9;
+      &:hover {
+          border-bottom: 2px solid #2983BC;
+      }
   }
   .comments_wrapper {
     &:hover {
@@ -329,6 +342,19 @@
         transition: text-shadow 300ms ease;
       }
     }
+  }
+  table {
+    color:#CFCFCF;
+    background:#2a2927; 
+  }
+  table th {
+    background: #2a2927;
+  }
+  table tr {
+      border-bottom: 1px solid #2a2927;
+      &:hover {
+          border-bottom: 1px solid #444;
+      }
   }
   .comments_wrapper {
     &:hover {

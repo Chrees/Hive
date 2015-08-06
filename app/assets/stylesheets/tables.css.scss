@@ -1,0 +1,68 @@
+table a:visited {
+	opacity: 0.4;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+table thead { 
+	cursor:pointer;
+}
+
+table {
+	font-size:1.2em;
+	margin:20px;
+}
+
+table th {
+    width: 50%;
+	padding:8px 20px 8px 20px;
+}
+table th:first-child {
+	text-align: left;
+	padding-left:15px;
+}
+table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+table tr {
+	text-align: left;
+	padding-left:15px;
+}
+table td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+table td {
+	padding:18px;
+}
+table td:last-child {
+	font-size: 0.8em;
+}
+table tr:last-child td {
+	border-bottom:0;
+}
+table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table:hover tr {
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}

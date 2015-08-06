@@ -148,7 +148,16 @@
   background-position: 50%;
   img {
     margin-top: 70px;
-    margin-left: -10px;
+    margin-left: -11px;
+    &:hover {
+      -webkit-filter: brightness(120%) hue-rotate(-120deg);
+      filter: brightness(120%) hue-rotate(-120deg);
+    }
+    -webkit-transition: all 1000ms ease;
+    -moz-transition: all 1000ms ease;
+    -ms-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
   }
   visibility: visible;
   -webkit-transform: rotate(-60deg);

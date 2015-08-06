@@ -21,7 +21,7 @@
 
   .search
     = form_tag posts_path, :method => 'get' do |f|
-      = text_field_tag :search, params[:search], :class => "searchbox"
+      = text_field_tag :search, params[:search], :class => "searchbox", :value => @tag
       //= submit_tag "Search"
 
 %section#tile_wrapper.infinite-table

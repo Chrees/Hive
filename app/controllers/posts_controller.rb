@@ -8,7 +8,6 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    
     if @post.save
       redirect_to @post, notice: "Successfully created new post"
     else
@@ -45,6 +44,7 @@ class PostsController < ApplicationController
       @is_categorized = true
     elsif params[:tag]
       @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(14)
+      @tag = params[:tag]
     elsif params[:search] && params[:search].size != 0
       @posts = Post.tagged_with(params[:search]).page(params[:page]).per(14)
     else
