@@ -2,7 +2,7 @@
 .daytime {
   background: #E9E9E9;
   .navbar-default{
-    background-color: #E9E9E9;
+    background-color: transparent;
   }
   .logo a {
     color: #222;
@@ -13,7 +13,7 @@
   #index_wrapper {
     background: #E9E9E9;
   }
-  #keys, #mode, #profile {
+  #keys, #mode, #profile, #Layer_1 {
     fill: #444;
     &:hover {
       path, circle {
@@ -102,6 +102,7 @@
   .description_wrapper {
     blockquote {
       border-left: 5px solid #2D91D1;
+      padding: 15px 20px 30px 20px;
     }
     pre {
       color: #2D91D1;
@@ -201,7 +202,7 @@
 .nighttime {
   background: #2A2927;
   .navbar-default{
-    background-color: #2A2927;
+    background-color: transparent;
   }
   .logo a {
     color: #CFCFCF;
@@ -212,13 +213,7 @@
   #index_wrapper {
     background: #191816;
   }
-  #mode path, #profile path, #profile circle {
-    fill: #CFCFCF;
-    &:hover {
-      fill: #EFEFEF;
-    }
-  }
-  #profile path, #profile circle {
+  #mode path, #profile path, #profile circle, #Layer_1 {
     fill: #CFCFCF;
     &:hover {
       fill: #EFEFEF;
@@ -324,6 +319,7 @@
   .description_wrapper {
     color: #CCC;
     blockquote {
+      padding: 15px 20px 30px 20px;
       border-left: 5px solid #5BC222;
     }
     pre {

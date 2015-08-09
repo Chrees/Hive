@@ -1,5 +1,24 @@
 /* _________________________________________ CONTROLS _________________________________________ */
 
+html {
+  #navfield_left, #navfield_right {
+      opacity: 0;
+  }
+  &:hover {
+    #navfield_left, #navfield_right {
+      opacity: 1;
+    }
+  }
+}
+
+.navbar-default {
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+    transition-duration: 500ms;
+  }
+}
+
 #showpage-logo {
   opacity: 0.6;
 }
@@ -37,6 +56,11 @@
   }
 }
 
+.navicon {
+  padding-top: 35vmin;
+}
+
+
 #keys {
   float: left;
   svg {
@@ -47,11 +71,11 @@
 /* _________________________________________ CONTENT _________________________________________ */
 
 .image-wrapper {
-  margin-top: 60px;
-  margin-bottom: 65px;
+  margin-top: 73px;
+  margin-bottom: 73px;
   img {
     box-shadow:  5px 10px 31px -3px rgba(0,0,0,0.33);
-    height: 88vmin;
+    height: 85vmin;
     max-width: 90vw;
     display: block;
     margin: 0 auto;
@@ -150,21 +174,23 @@
 }
 
 #navfield_left {
+  padding: 0 20px 0 20px;
   left: 0px;
   top: 60px;
   height: 100vh;
   width: 5vw;
   z-index: 999;
-  position: fixed;
+  position: absolute;
 }
 
 #navfield_right {
+  padding: 0 20px 0 20px;
   right: 0px;
   top: 60px;
   height: 100vh;
   width: 5vw;
   z-index: 999;
-  position: fixed;
+  position: absolute;
 }
 
 #navfield_center {

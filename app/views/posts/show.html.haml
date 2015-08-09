@@ -6,7 +6,7 @@
   .col-md-2
 
   .container
-    .logo#showpage-logo= link_to "novoli", root_path, data: { keybinding: 'x' }
+    .logo#showpage-logo= link_to "hiatus", root_path, data: { keybinding: 'x' }
     .controls-left
       #mode= inline_svg("Nightmode")
       = link_to inline_svg("Nextcat"), @post.nextcat, data: { keybinding: ['q'] }
@@ -21,9 +21,11 @@
 
 = link_to @post.next, data: { keybinding: ['a','left'] } do
   #navfield_left
+    .navicon= inline_svg("Next.svg")
 
 = link_to @post.previous, data: { keybinding: ['d','right'] } do
   #navfield_right
+    .navicon= inline_svg("Pre.svg")
 
 = link_to @post.image.url, data: { keybinding: ['f'] } do
   #navfield_center
@@ -32,7 +34,8 @@
   .post-details
     .image-details
       = distance_of_time_in_words(Time.now, @post.created_at)
-      ago
+      ago to
+      = link_to @post.category.name, posts_path(category:  @post.category.name)
     .image-details
       = link_to @post.image.url do
         %span.glyphicon.glyphicon-resize-full

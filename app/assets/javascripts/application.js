@@ -33,54 +33,6 @@ function show() {
 
 setTimeout(show, 3000);
 
-// Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('.navbar-default').outerHeight();
-
-$(window).scroll(function(event){
-    didScroll = true;
-});
-
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-
-$('html').keydown(function (e) {
-	if (e.keyCode == 38 || e.keyCode == 67) {
-		$('.navbar-default').toggleClass('nav-down').toggleClass('nav-up');
-	}
-});
-
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st < lastScrollTop){
-        // Scroll Down
-        $('.navbar-default').removeClass('nav-down').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('.navbar-default').removeClass('nav-up').addClass('nav-down');
-        }
-    }
-    
-    lastScrollTop = st;
-}
-
-
-
 $('a[href*=#]:not([href=#])').keydown(function(e) {
     if (e.keyCode == 87 || e.keyCode == 83) {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -106,8 +58,6 @@ $(document).ready(function(){
     }, 2015);
 });
 
-
-
 // For changing colors
 $(document).ready(function(){
     $('#mode').click(function(){
@@ -124,3 +74,19 @@ $(document).ready(function(){
     }
 });
 
+$('html').keydown(function(e){
+    if (e.keyCode == 82) {
+        $('body').toggleClass('daytime nighttime');
+        var nighttime = sessionStorage.getItem('nighttime');
+        if (nighttime  == "true") {
+            sessionStorage.setItem('nighttime', "false");
+        }
+        else {
+            sessionStorage.setItem('nighttime', "true");
+        }
+    }
+});
+
+if( window.localStorage && !window.localStorage.isReturningVisitor ) {
+    window.localStorage.isReturningVisitor = true;
+}
