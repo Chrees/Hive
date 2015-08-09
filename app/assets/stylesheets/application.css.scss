@@ -152,3 +152,14 @@ hr {
     width: 90%;
   }
 }
+
+#shortcuts-wrapper {
+  border-radius: 3px;
+  margin: 0 0 100px 20%;
+  padding: 50px 0 70px 0;
+  width: 60%;
+  background: white;
+  -webkit-box-shadow: 10px 10px 13px -8px rgba(68,68,68,0.5);
+  -moz-box-shadow: 10px 10px 13px -8px rgba(68,68,68,0.5);
+  box-shadow: 10px 10px 13px -8px rgba(68,68,68,0.5);
+}

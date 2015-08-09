@@ -2,7 +2,7 @@
   .container.margin-top
     .logo= link_to "hiatus", root_path, data: { keybinding: 'x' }
 
-%section#tile_wrapper.infinite-table.daytime2
+%section#tile_wrapper.infinite-table
   %article
     %h2 Log in
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
