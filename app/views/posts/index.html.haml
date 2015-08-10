@@ -8,6 +8,7 @@
       #profile= inline_svg("Profile")
 
 %div#colorbox
+  #keys= link_to inline_svg("Keys"), shortcuts_path
   #mode= inline_svg("Nightmode")
 
 %section#index_wrapper
@@ -31,7 +32,6 @@
     = link_to_next_page(@posts, '', :remote => true)
 
 #footer
-  .col-md-6.col-md-offset-3
+  .col-md-1
     =link_to "about", about_path  
-    =link_to "shortcuts", shortcuts_path
     =link_to "contact", contact_path

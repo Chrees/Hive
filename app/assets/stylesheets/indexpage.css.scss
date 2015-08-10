@@ -17,7 +17,7 @@
   z-index: 999;
   padding-top: 25px;
   height: 80px;
-  width: 65px;
+  width: 105px;
   top: 0px;
   right: 0px;
   position: absolute;
@@ -35,10 +35,18 @@
   z-index: 999;
   padding-top: 25px;
   height: 80px;
-  width: 60px;
+  width: 125px;
   top: 0px;
   left: 0px;
+  padding-left: 20px;
   position: absolute;
+  #mode {
+    float: left;
+  }
+  #keys {
+    margin-top: 5px;
+    float: right;
+  }
 }
 
 #mode {
@@ -205,6 +213,10 @@
   #tile_wrapper article {
     width: 610px;
   }
+  #footer {
+    bottom: 0px;
+    background: rgba (40, 40, 40, 0.5);
+  }
 }
 
 @media (max-width: 640px) {
@@ -240,7 +252,10 @@
 /* _________________________________________ FOOTER _________________________________________ */
 
 #footer {
-  height: 45px;
+  background-color: rgba (40, 40, 40, 0.5);
+  left: 0px;
+  bottom: 30px;
+  position: fixed;
   text-align: center;
   letter-spacing: 1px;
   a {
