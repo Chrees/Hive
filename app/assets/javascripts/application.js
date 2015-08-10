@@ -29,9 +29,9 @@ $(window).load(function() {
 function show() {
     $('.loader').delay(1000).hide();
     $('body').fadeIn();
-    /*if ("https://lit-wave-4082.herokuapp.com/" == document.referrer) {
+    if ("https://lit-wave-4082.herokuapp.com/" == document.referrer) {
         $('.navbar-default').css("opacity", 1);
-    }*/
+    }
 };
 
 setTimeout(show, 3000);
