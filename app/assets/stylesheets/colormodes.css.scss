@@ -48,7 +48,6 @@
     }
   }
   #tile_wrapper {
-    border-radius: 10px;
     box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.2);
     background: #D1E3EA;
     /*background-image: url("tex.png");*/
@@ -211,7 +210,8 @@
     }
   }
   #index_wrapper {
-    background: #191816;
+    /*background: #191816;*/
+    background: #2A2927;
   }
   #mode path, #profile path, #profile circle, #Layer_1 {
     fill: #CFCFCF;
@@ -219,12 +219,9 @@
       fill: #EFEFEF;
     }
   }
-  .categories {
-    background: #191816;
-  }
   .searchbox {
     box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.2);
-    background: #191816;
+    background: #2A2927;
     color: #CFCFCF;
     &:hover {
       background: #444;
@@ -250,7 +247,7 @@
   }
   #tile_wrapper {
     box-shadow: inset 0px 0px 22px 0px rgba(0,0,0,0.4);
-    background: #324C59;
+    background: #24333B;
     .tile {
       opacity: 0.9;
     }
