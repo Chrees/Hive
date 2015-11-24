@@ -40,13 +40,13 @@ class PostsController < ApplicationController
   def index
     if params[:category].present?
       @category_id = Category.find_by(name: params[:category]).id
-      @posts = Post.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per(28)
+      @posts = Post.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per(56)
       @is_categorized = true
     elsif params[:tag]
-      @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(28).order("created_at DESC")
+      @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(56).order("created_at DESC")
       @tag = params[:tag]
     elsif params[:search] && params[:search].size != 0
-      @posts = Post.tagged_with(params[:search]).page(params[:page]).per(28)
+      @posts = Post.tagged_with(params[:search]).page(params[:page]).per(56).order("created_at DESC")
     else
       @posts = Post.all.order("created_at DESC").page(params[:page]).per(28)
       @is_categorized = true
