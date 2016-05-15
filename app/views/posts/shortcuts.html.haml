@@ -1,24 +1,22 @@
-#shortcuts-wrapper
-  %nav.navbar
-    .container
-      .logo= link_to "hiatus", root_path, data: { keybinding: 'x' }
-  %br
-  %br
+%br
+%nav.navbar
   .container
-    #shortcuts= image_tag("Shortcuts.png")
+    .logo= link_to "hiatus", root_path, data: { keybinding: 'x' }
+.container
+  #shortcuts= image_tag("Shortcuts.png")
 
-  .col-md-6.col-md-offset-3.font-about
-    %br
-    %p Some additional Advise:
-    %br
-    %p You may want to use the page in Fullscreen Mode (just press F11 for that in most cases)
-    %p I also recommend using Firefox or Chrome.
-    %p I have no experience with Safari or other browsers, so if it doesn't look right. Sorry ¯\_(ツ)_/¯
-    %p
-    %br
-    %br
-    %br
-    #homebutton
-      = link_to root_path do
-        %span.glyphicon.glyphicon-home
-    %br
+.col-md-6.col-md-offset-3.font-about
+  %br
+  %p Some additional Advise:
+  %br
+  %p You may want to use the page in Fullscreen Mode (just press F11 for that in most cases)
+  %p I also recommend using Firefox or Chrome.
+  %p I have no experience with Safari or other browsers, so if it doesn't look right. Sorry ¯\_(ツ)_/¯
+  %p
+  %br
+  %br
+  %br
+  #homebutton
+    = link_to root_path do
+      %span.glyphicon.glyphicon-home
+  %br

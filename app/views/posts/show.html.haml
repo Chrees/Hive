@@ -51,10 +51,10 @@
       = link_to like_post_path(@post), method: :put, class: "likes" do
         = @post.get_upvotes.size
         %span.glyphicon.glyphicon-heart
-    .image-details.pull-right
-      = link_to post_path(:anchor => 'bottom'), data: { keybinding: ['s'] } do
-        = @post.comment_threads.count
-        %span.glyphicon.glyphicon-comment
+    /.image-details.pull-right
+    /  = link_to post_path(:anchor => 'bottom'), data: { keybinding: ['s'] } do
+    /    = @post.comment_threads.count
+    /    %span.glyphicon.glyphicon-comment
   %hr/
   %a.class{:name => "bottom"}
   .post-tags
@@ -64,7 +64,7 @@
   - if @post.description.present?
     .description_wrapper= markdown @post.description
     %hr/
-  #comments
-    = render :partial => 'comments/comment', :collection => @comments, :as => :comment
-    = render :partial => 'comments/form', :locals => { :comment => @new_comment }
+  /#comments
+  /  = render :partial => 'comments/comment', :collection => @comments, :as => :comment
+  /  = render :partial => 'comments/form', :locals => { :comment => @new_comment }
   .margin-bottom

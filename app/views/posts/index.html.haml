@@ -1,11 +1,11 @@
-%div#accountbox
-  - if user_signed_in?
-    /*#profile= link_to image_tag("Sign_in.svg"), edit_user_registration_path*/
-    = link_to edit_user_registration_path do
-      #profile= inline_svg("Profile")
-  - else
-    = link_to new_user_session_path do
-      #profile= inline_svg("Profile")
+/%div#accountbox
+/  - if user_signed_in?
+/    /*#profile= link_to image_tag("Sign_in.svg"), edit_user_registration_path*/
+/    = link_to edit_user_registration_path do
+/      #profile= inline_svg("Profile")
+/  - else
+/    = link_to new_user_session_path do
+/      #profile= inline_svg("Profile")
 
 %div#colorbox
   #keys= link_to inline_svg("Keys"), shortcuts_path
